@@ -14,6 +14,7 @@ pipeline {
   stages {
     stage('Run shell') {
       steps {
+        sh 'echo "git hooked"'
         sh 'apt-get update -y; apt-get install git -y'
       }
     }
