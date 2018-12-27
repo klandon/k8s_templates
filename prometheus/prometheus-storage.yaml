@@ -1,0 +1,36 @@
+---
+# Namespace
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: prometheus
+---
+# PV needed for masters
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: prometheus
+  namespace: prometheus
+spec:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 60Gi
+  hostPath:
+    path: /opt/persisted_data/prometheus/
+---
+# PV Claim
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: prometheus
+  namespace: prometheus
+  labels:
+    type: prometheus
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 60Gi

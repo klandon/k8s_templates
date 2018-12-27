@@ -1,0 +1,36 @@
+---
+# Namespace
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: grafana
+---
+# PV needed for masters
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: grafana
+  namespace: grafana
+spec:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 160Gi
+  hostPath:
+    path: /opt/persisted_data/grafana/
+---
+# PV Claim
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: grafana
+  namespace: grafana
+  labels:
+    type: grafana
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 160Gi

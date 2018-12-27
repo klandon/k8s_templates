@@ -1,0 +1,19 @@
+---
+#Expose service by ip
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: grafana
+  name: grafana-service
+  namespace: grafana
+spec:
+  type: ClusterIP
+  clusterIP: 10.100.115.150
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    app: grafana
