@@ -8,12 +8,12 @@ podTemplate(label: 'docker',
   volumes: [hostPathVolume(hostPath: '/var/run/docker.sock', mountPath: '/var/run/docker.sock')]
   ) {
 
-  def image = "jenkins/jnlp-slave"
+  def image = "test:0"
   node('docker') {
     stage('Build Docker image') {
-      git 'https://github.com/jenkinsci/docker-jnlp-slave.git'
+      git 'https://github.com/klandon/k8s_templates.git'
       container('docker') {
-        sh "docker build -t ${image} ."
+        sh "docker build -t ${image} -f jenkins/Dockerfile ."
       }
     }
   }
