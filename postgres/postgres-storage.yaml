@@ -1,0 +1,36 @@
+---
+# Namespace
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: postgres
+---
+# PV needed for masters
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: postgres
+  namespace: postgres
+spec:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 100Gi
+  hostPath:
+    path: /opt/persisted_data/postgres/
+---
+# PV Claim
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: postgres
+  namespace: postgres
+  labels:
+    type: postgres
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Gi
