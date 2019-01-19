@@ -1,0 +1,36 @@
+---
+# Namespace
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: elk
+---
+# PV needed for masters
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: master
+  namespace: elk
+spec:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 160Gi
+  hostPath:
+    path: /opt/persisted_data/elk/master
+---
+# PV Claim
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: master
+  namespace: elk
+  labels:
+    type: master
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 160Gi
