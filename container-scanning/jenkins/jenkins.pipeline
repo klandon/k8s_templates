@@ -8,8 +8,18 @@ podTemplate(label: 'docker',
   volumes: [hostPathVolume(hostPath: '/var/run/docker.sock', mountPath: '/var/run/docker.sock')]
   ) {
 
-  def image = "test:0"
+  def image = "clair-client"
   node('docker') {
+
+    stage('DockerHub Login') {
+        script{
+         println("Logging Into Docker Hub")
+         withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'dockerhub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]){
+             docker loging --username=$(USERNAME) --password=$(PASSWORD)
+         }
+        }
+    }
+
     stage('Build Docker image') {
       git 'https://github.com/klandon/k8s_templates.git'
       container('docker') {
