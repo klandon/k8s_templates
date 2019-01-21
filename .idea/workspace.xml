@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="205eb0ef-6b74-4ffb-8eeb-e2eced601e8c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/container-scanning/clair-client/tagVer.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/container-scanning/clair-client/tagVer.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/container-scanning/jenkins/jenkins.pipeline" beforeDir="false" afterPath="$PROJECT_DIR$/container-scanning/jenkins/jenkins.pipeline" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,19 +13,19 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/container-scanning/jenkins/jenkins.pipeline">
+        <entry file="file://$PROJECT_DIR$/container-scanning/scanning-examples/jenkins.pipeline">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="300">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/container-scanning/clair-client/tagVer.yaml">
+        <entry file="file://$PROJECT_DIR$/container-scanning/jenkins/jenkins.pipeline">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="16" selection-start-column="16" selection-end-column="16" />
+            <state relative-caret-position="645">
+              <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -40,8 +39,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/jenkins/dind.pipeline" />
-        <option value="$PROJECT_DIR$/container-scanning/jenkins/jenkins.pipeline" />
         <option value="$PROJECT_DIR$/container-scanning/clair-client/tagVer.yaml" />
+        <option value="$PROJECT_DIR$/container-scanning/scanning-examples/jenkins.pipeline" />
+        <option value="$PROJECT_DIR$/container-scanning/jenkins/jenkins.pipeline" />
       </list>
     </option>
   </component>
@@ -77,7 +77,7 @@
               <item name="k8s_templates" type="b2602c69:ProjectViewProjectNode" />
               <item name="k8s_templates" type="462c0819:PsiDirectoryNode" />
               <item name="container-scanning" type="462c0819:PsiDirectoryNode" />
-              <item name="clair-client" type="462c0819:PsiDirectoryNode" />
+              <item name="jenkins" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="k8s_templates" type="b2602c69:ProjectViewProjectNode" />
@@ -93,7 +93,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548085080216" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548088256695" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -124,63 +124,63 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1548083053373</updated>
-      <workItem from="1548083054834" duration="1934000" />
+      <workItem from="1548083054834" duration="3668000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1934000" />
+    <option name="totallyTimeSpent" value="3668000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3405" y="-541" width="1995" height="1411" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Learn" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.249872" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info id="Learn" order="0" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.249872" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Database Changes" order="2" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info anchor="bottom" id="Run" order="7" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="right" id="Theme Preview" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Palette&#9;" order="2" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jenkins/dind.pipeline">
+    <entry file="file://$PROJECT_DIR$/jenkins/pipeline-example.pipeline">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        <state relative-caret-position="330">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/container-scanning/jenkins/jenkins.pipeline">
+    <entry file="file://$PROJECT_DIR$/jenkins/dind.pipeline">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="300">
+          <caret line="20" lean-forward="true" selection-end-line="20" />
         </state>
       </provider>
     </entry>
@@ -188,6 +188,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="16" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/container-scanning/scanning-examples/jenkins.pipeline">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/container-scanning/jenkins/jenkins.pipeline">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
         </state>
       </provider>
     </entry>

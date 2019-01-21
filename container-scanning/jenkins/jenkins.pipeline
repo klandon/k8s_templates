@@ -9,7 +9,7 @@ podTemplate(label: 'docker',
   ) {
 
   def tagVer = null
-  def image = "clair-client"
+  def image = "landonkt/clair-client"
   node('docker') {
 
     stage('DockerHub Login') {
@@ -29,8 +29,19 @@ podTemplate(label: 'docker',
       container('docker') {
         script{
             tagVer = readYaml file: 'container-scanning/clair-client/tagVer.yaml'
-            print tagVer
-            sh "docker build -t ${image} -f container-scanning/clair-client/Dockerfile ."
+
+            /** Future Version Auto Increment Testing
+            * print tagVer
+            * tagVer.version = tagVer.version + 1
+            * print tagVer.version
+            * sh 'rm container-scanning/clair-client/tagVer.yaml'
+            * writeYaml file: 'container-scanning/clair-client/tagVer.yaml', data: tagVer
+            * tagVer = readYaml file: 'container-scanning/clair-client/tagVer.yaml'
+            * print tagVer
+            */
+
+            sh "docker build -t ${image}:${tagVer.version} -f container-scanning/clair-client/Dockerfile ."
+            //sh "docker push ${image}:${tagVer.version}"
         }
 
       }
